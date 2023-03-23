@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Nitesh</title>
 </head>
-<body>
+<body id="canvas">
     <div class="wrap">
   <div class="profile">
     <!-- <div class="imagewrapper">
@@ -18,23 +18,23 @@
         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
           <div class="flipper">
             <div class="front">
-              <span class="name">Nitesh Dhungana</span>
             </div>
             <div class="back">
               <div class="back-logo"></div>
-              <div class="back-title">@davidwalshblog</div>
-              <p>Mozilla Web Developer, MooTools & jQuery Consultant, MooTools Core Developer, Javascript Fanatic, CSS Tinkerer, PHP Hacker, and web lover.</p>
+              <div class="back-title">Nitesh Dhungana</div>
+              <p id="intro_text">Django Developer at 
+                <br><a target="_blank" href="https://gaaubesi.com/">Gaaubesi Logistics </a>
+                <!-- my skills -->
+                <br><br>My Skills: <br>JavaScript · SQL · Django · Python
+              </p>
             </div>
           </div>
         </div>
-    <span class="profile_name">Nitesh Dhungana</span>
-    <span class="at">
-      <a href = "mailto: contact@niteshdhungana.com.np">Send Email</a>
-    </span>
   </div>
   <br><br>
   <div class="links">
     <ul>
+      <li><a href = "mailto: contact@niteshdhungana.com.np" class="link"><i class="fab fa-youtube"></i> Send Mail</a></li>
       <li><a target="_blank" href="https://www.facebook.com/Dhungananitesh/" class="link"><i class="fab fa-youtube"></i> Facebook Profile</a></li>
       <li><a target="_blank" href="https://www.youtube.com/channel/UCZDvXhQHYm8Y3EliRfLu3kw" class="link"><i class="fab fa-youtube"></i> Subscribe on YouTube channel</a></li>
       <li><a target="_blank" href="https://github.com/Dhnitesh" class="link"><i class="fab fa-github"></i> Github</a></li>
@@ -42,5 +42,15 @@
     </ul>
   </div>
 </div>
+
+<script>
+ // generate a random HSL value with fixed saturation
+const randomHue = Math.floor(Math.random() * 360);
+const randomLightness = Math.floor(Math.random() * 51) + 50; // lightness between 50 and 100
+const randomColor = `hsl(${randomHue}, 100%, ${randomLightness}%)`;
+
+// set the background color of the body to the random color
+document.body.style.backgroundColor = randomColor;
+</script>
 </body>
 </html>
